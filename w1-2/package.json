@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "deploy-mumbai": "npx hardhat run scripts/deploy.ts --network mumbai",
+    "deploy-goerli": "npx hardhat run scripts/deploy.ts --network goerli",
+    "verify-mumbai": "npx hardhat verify --network mumbai 0x809f7fD1008A495ae7627E4cfC04d9f93C7C785C",
+    "verify-goerli": "npx hardhat verify --network goerli 0x3ca3e4b2714c7697c70fcc88259afb7786e1e4ae"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +21,7 @@
     "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
     "@nomicfoundation/hardhat-toolbox": "^2.0.0",
     "@nomiclabs/hardhat-ethers": "^2.0.0",
-    "@nomiclabs/hardhat-etherscan": "^3.0.0",
+    "@nomiclabs/hardhat-etherscan": "^3.1.7",
     "@typechain/ethers-v5": "^10.1.0",
     "@typechain/hardhat": "^6.1.2",
     "@types/chai": "^4.2.0",
@@ -30,5 +35,8 @@
     "ts-node": ">=8.0.0",
     "typechain": "^8.1.0",
     "typescript": ">=4.5.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
   }
 }
