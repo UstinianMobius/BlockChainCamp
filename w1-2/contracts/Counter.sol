@@ -13,12 +13,12 @@ contract Counter {
     }
 
     modifier onlyOwner() {
-        require(msg.sender == owner, "not owner");
+        require(msg.sender == owner, "you aren't owner");
         _;
     }
 
     function addCount() public onlyOwner {
-        count = count + 1;
+        count += 1;
     }
 
     function getCount() public view returns (uint) {
