@@ -7,7 +7,7 @@ async function main() {
 
   await counter.deployed()
 
-  console.log('Counter address:', counter.address)
+  console.log(`Counter is deployed successfully, address is ${counter.address}`)
 }
 
 // We recommend this pattern to be able to use async/await everywhere
